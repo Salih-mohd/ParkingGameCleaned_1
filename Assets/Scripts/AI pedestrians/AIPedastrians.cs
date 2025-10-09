@@ -2,12 +2,17 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 
-public class AIPedastrians : MonoBehaviour
+public class AIPedestrian : MonoBehaviour
 {
-    public Transform[] waypoints; 
-    public float waitTime = 3f;  
+    [Header("Waypoints")]
+    public Transform[] waypoints;
+    public float waitTime = 2f;
+
+    [Header("Components")]
     private NavMeshAgent agent;
-    private int currentWaypointIndex = 0;
+    public Animator animator;
+
+    private int currentWaypointIndex = -1;
     private bool isWaiting = false;
 
     void Start()
@@ -15,34 +20,53 @@ public class AIPedastrians : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         if (waypoints.Length > 0)
         {
-            
-            agent.SetDestination(waypoints[currentWaypointIndex].position);
+            MoveToNextWaypoint();
         }
-        
     }
 
     void Update()
     {
-        
-        if (!isWaiting && !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+        if (isWaiting) return;
+
+        // Check if agent reached its destination
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
-            if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+            if (!agent.hasPath || agent.velocity.sqrMagnitude < 0.01f)
             {
-                
-                StartCoroutine(WaitAndMoveToNext());
+                StartCoroutine(WaitAndMove());
             }
         }
     }
 
-    IEnumerator WaitAndMoveToNext()
+    IEnumerator WaitAndMove()
     {
         isWaiting = true;
-        yield return new WaitForSeconds(waitTime); 
 
-        
-        currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length; 
-        agent.SetDestination(waypoints[currentWaypointIndex].position);
+        // Switch to idle animation
+        animator.SetBool("idle", true);
+
+        yield return new WaitForSeconds(waitTime);
+
+        MoveToNextWaypoint();
+
+        // Switch back to walk animation
+        animator.SetBool("idle", false);
 
         isWaiting = false;
+    }
+
+    void MoveToNextWaypoint()
+    {
+        if (waypoints.Length == 0) return;
+
+        int nextIndex;
+        do
+        {
+            nextIndex = Random.Range(0, waypoints.Length);
+        }
+        while (nextIndex == currentWaypointIndex && waypoints.Length > 1);
+
+        currentWaypointIndex = nextIndex;
+        agent.SetDestination(waypoints[currentWaypointIndex].position);
     }
 }

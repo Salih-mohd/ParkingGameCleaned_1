@@ -9,9 +9,11 @@ public class UiManager : MonoBehaviour
 
     public Canvas winLoseCanvas;
     public GameObject winPanel, losePanel;
+    public GameObject pausePanel;
     public InputActionAsset inputActions;
     public  GameObject dancingButtons;
     public  GameObject turningButtons;
+    
 
     [HideInInspector] public GameObject activeCarUIManager;
     //public  GameObject[] CarPrefab;
@@ -33,6 +35,18 @@ public class UiManager : MonoBehaviour
         GameManager.instance.onLevelLose.AddListener(ShowLosePanel);
         GameManager.instance.onLevelWin.AddListener(ShowWinPanel);
 
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+
+            pausePanel.SetActive(true);
+            winLoseCanvas.enabled = true;
+            inputActions.FindActionMap("Car").Disable();
+
+        }
     }
 
     private void OnEnable()
@@ -61,6 +75,13 @@ public class UiManager : MonoBehaviour
 
 
 
+    }
+
+    public void disablePausePanel()
+    {
+        pausePanel.SetActive(false );
+        inputActions.FindActionMap("Car").Enable();
+        winLoseCanvas.enabled = false;
     }
 
     public void ShowLosePanel()

@@ -21,15 +21,14 @@ public class ParkingDetector : MonoBehaviour
     private bool isInside;
 
     // 00FFEC parked color
-    // E9FF00 un parked color
+    // E9FF00 un parked color 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         if (isParking)
         {
-            GettingTheWheels();
-
+           
             parkingBound = parkingZone.bounds;
         }
 
@@ -40,11 +39,27 @@ public class ParkingDetector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if (isParking)
+        //{
+        //    CheckingAllWheels();
+        //}       
+        
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
         if (isParking)
         {
-            CheckingAllWheels();
-        }       
-        
+            
+            if (other.gameObject.CompareTag("Car"))
+            {
+                wheelColliders = other.gameObject.GetComponentsInChildren<WheelCollider>();
+                CheckingAllWheels();
+            }
+        }
+
+
+
     }
 
     private void CheckingAllWheels()
@@ -82,18 +97,18 @@ public class ParkingDetector : MonoBehaviour
         }
     }
 
-    private void GettingTheWheels()
-    {
-        foreach (GameObject car in carPrefabs)
-        {
-            if (car.activeInHierarchy)
-            {
-                wheelColliders = car.GetComponentsInChildren<WheelCollider>();
+    //private void GettingTheWheels()
+    //{
+    //    foreach (GameObject car in carPrefabs)
+    //    {
+    //        if (car.activeInHierarchy)
+    //        {
+    //            wheelColliders = car.GetComponentsInChildren<WheelCollider>();
 
-            }
+    //        }
 
-        }
-    }
+    //    }
+    //}
 
     private void AboutToWin()
     {
@@ -109,6 +124,8 @@ public class ParkingDetector : MonoBehaviour
             Invoke("TriggeringEvent", 5);
         }
     }
+
+    
 
     private void OnTriggerExit(Collider other)
     {
