@@ -39,6 +39,7 @@ SpriteAtlas:
     packedSpriteRenderDataKeys:
     - b4ed4ea2c524ef74faae56c6a7f18f37: 21300000
     - 27e65645b65755946a6c471cd9920ff4: 21300000
+    - e37ecb07b51387642baf6956f5627aa0: 21300000
     - ec04a4e8106d464428856983e8d93116: 21300000
     - 71eaf3f91e7a1ef4481fef0e9365893c: 21300000
     - 5d828bebef42ea24787f53df26b0ec1d: 21300000
@@ -47,6 +48,7 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: b4ed4ea2c524ef74faae56c6a7f18f37, type: 3}
   - {fileID: 21300000, guid: 27e65645b65755946a6c471cd9920ff4, type: 3}
+  - {fileID: 21300000, guid: e37ecb07b51387642baf6956f5627aa0, type: 3}
   - {fileID: 21300000, guid: ec04a4e8106d464428856983e8d93116, type: 3}
   - {fileID: 21300000, guid: 71eaf3f91e7a1ef4481fef0e9365893c, type: 3}
   - {fileID: 21300000, guid: 5d828bebef42ea24787f53df26b0ec1d, type: 3}
@@ -54,6 +56,7 @@ SpriteAtlas:
   m_PackedSpriteNamesToIndex:
   - Button 023
   - accelarator_and_break__2_-removebg-preview (1)
+  - fuel-icon-5
   - cam switching
   - icons8-d-50
   - Button 008

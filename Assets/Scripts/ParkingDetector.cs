@@ -6,6 +6,8 @@ public class ParkingDetector : MonoBehaviour
 
     public bool isParking;
     public bool isPicking;
+    public bool isDancing;
+    public DancingController danceController;
 
     public Color outSideColor;
     public Color inSideColor;
@@ -29,10 +31,11 @@ public class ParkingDetector : MonoBehaviour
         if (isParking)
         {
            
-            parkingBound = parkingZone.bounds;
+           // parkingBound = parkingZone.bounds;
         }
+        parkingBound = parkingZone.bounds;
 
-        
+
 
     }
 
@@ -51,11 +54,16 @@ public class ParkingDetector : MonoBehaviour
         if (isParking)
         {
             
-            if (other.gameObject.CompareTag("Car"))
-            {
-                wheelColliders = other.gameObject.GetComponentsInChildren<WheelCollider>();
-                CheckingAllWheels();
-            }
+            //if (other.gameObject.CompareTag("Car"))
+            //{
+            //    wheelColliders = other.gameObject.GetComponentsInChildren<WheelCollider>();
+            //    CheckingAllWheels();
+            //}
+        }
+        if (other.gameObject.CompareTag("Car"))
+        {
+            wheelColliders = other.gameObject.GetComponentsInChildren<WheelCollider>();
+            CheckingAllWheels();
         }
 
 
@@ -83,16 +91,17 @@ public class ParkingDetector : MonoBehaviour
         if(isInside)
         {
             ColorChange(inSideColor);
-            Invoke("AboutToWin", 5);
-            
-
+            if(isParking) Invoke("AboutToWin", 5);
+            if (isDancing) danceController.DanceTime();
 
         }
         else
         {
             ColorChange(outSideColor);
-            CancelInvoke("AboutToWin");
+            if(isParking) CancelInvoke("AboutToWin");
             
+
+
 
         }
     }
@@ -122,6 +131,13 @@ public class ParkingDetector : MonoBehaviour
         {
             if(other.gameObject.CompareTag("Car")) ColorChange(inSideColor);
             Invoke("TriggeringEvent", 5);
+        }
+
+        if (isDancing)
+        {
+            //if (other.gameObject.CompareTag("Car")) ColorChange(inSideColor);
+            //GameManager.instance.OnMission.Invoke();
+            danceController.DanceTime();
         }
     }
 

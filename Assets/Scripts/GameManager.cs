@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent onLevelWin = new UnityEvent();
     public UnityEvent onLevelLose = new UnityEvent();
     public UnityEvent<bool> isGearChanged = new UnityEvent<bool>();
-    
+    public UnityEvent OnMission=new UnityEvent();
     
 
     //public UnityEvent missionIsStarted= new UnityEvent();
@@ -101,6 +101,8 @@ public class GameManager : MonoBehaviour
         //Debug.Log($"TriggerGearChangingUi called with change: {change}");
         isGearChanged?.Invoke(change);
     }
+
+
 
 
     //public void TriggerMission()

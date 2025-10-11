@@ -27,7 +27,7 @@ public class UiManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        winLoseCanvas.enabled = false;
+        //winLoseCanvas.enabled = false;
         losePanel.SetActive(false);
         winPanel.SetActive(false);
 

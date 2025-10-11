@@ -31,11 +31,12 @@ public abstract class BaseCar : MonoBehaviour
     protected InputAction brakeAction;
     protected InputAction gearAction;
     protected InputAction camSwitchAction;
-    protected InputAction danceActUp;
-    protected InputAction danceActDown;
-    protected InputAction danceActLeft;
-    protected InputAction danceActRight;
-    protected InputAction dancingOn;
+    //dance actions
+    public InputAction danceActUp;
+    public InputAction danceActDown;
+    public InputAction danceActLeft;
+    public InputAction danceActRight;
+    public InputAction dancingOn;
 
 
     protected Vector2 moveActVal;
