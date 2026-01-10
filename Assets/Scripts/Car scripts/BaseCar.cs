@@ -31,6 +31,7 @@ public abstract class BaseCar : MonoBehaviour
     protected InputAction brakeAction;
     protected InputAction gearAction;
     protected InputAction camSwitchAction;
+    protected InputAction pauseAction;
     //dance actions
     public InputAction danceActUp;
     public InputAction danceActDown;
@@ -108,7 +109,7 @@ public abstract class BaseCar : MonoBehaviour
         brakeAction = inputActions.FindAction("Break");
         gearAction = inputActions.FindAction("GearSwitch");
         camSwitchAction = inputActions.FindAction("CamSwitch");
-
+        pauseAction = inputActions.FindAction("Pause");
 
         //dance actions
         dancingOn = inputActions.FindAction("isDancing");
@@ -151,6 +152,11 @@ public abstract class BaseCar : MonoBehaviour
         {
             isDancing = !isDancing;
             uiManager.DancingKeysOnAndOff(isDancing);
+        }
+
+        if (pauseAction.WasPerformedThisFrame())
+        {
+            uiManager.ShowPausePanel();
         }
 
 

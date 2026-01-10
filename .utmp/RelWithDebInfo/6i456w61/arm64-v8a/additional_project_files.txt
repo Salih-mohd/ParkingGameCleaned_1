@@ -1,0 +1,17 @@
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\GAToUnityCallbacks.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroEnd.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroHeaderBegin.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroSourceBegin.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAApplication.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAConfiguration.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGADebug.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAEvents.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAInput.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGASoftKeyboard.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGASoftKeyboardCallbacks.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGATypes.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAVersion.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGACallbacks.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAConfigurationCallbacks.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAKeyEventCallbacks.h
+D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAMotionEventCallbacks.h

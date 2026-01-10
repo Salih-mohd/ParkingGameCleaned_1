@@ -1,0 +1,10 @@
+# ninja log v5
+78	3664	7826718466357430	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f0934f9e03843755
+116	3707	7826718466367450	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	3e3afd80dd4f9b3e
+105	3707	7826718466357430	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	63ed0a9e437b99a4
+3	3709	7826718466482826	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	40b86798f5334bd9
+130	3710	7826718466367450	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	d0351167bc8ced8
+41	3711	7826718466382569	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	503f8936132e9cd1
+91	3712	7826718466784112	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	c5bfb8905048aa00
+55	3713	7826718467537025	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c8f78537cab39e73
+3734	4496	7826718476351143	D:/PROJECTS FROM 10 TO 19/Parking Mania/My project (1)/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6i456w61/obj/arm64-v8a/libgame.so	7ec21d32d070f9d3

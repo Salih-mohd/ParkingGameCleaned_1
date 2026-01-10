@@ -1,3 +1,4 @@
+using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,14 +11,29 @@ public class FuelBar : MonoBehaviour
     public bool isWin;
 
     private float currentTime;
-    private GameManager gameManager;
+    private bool isSubscribed;
+    //private GameManager gameManager;
+
+  
+
+    private void OnEnable()
+    {
+        currentTime = 3;
+
+        TrySubscribe();
+
+
+    }
 
     private void Start()
     {
-        currentTime = 3;
-        gameManager=FindAnyObjectByType<GameManager>();
-        gameManager.onLevelWin.AddListener(BoolChanger);
-        gameManager.OnMission.AddListener(BoolChanger);
+        TrySubscribe();
+    }
+
+    private void OnDisable()
+    {
+        GameManager.instance.onLevelWin.RemoveListener(BoolChanger);
+        GameManager.instance.OnMission.RemoveListener(BoolChanger);
     }
 
 
@@ -28,7 +44,7 @@ public class FuelBar : MonoBehaviour
         {
             if (Time.time > currentTime && fuelBar.value >= 0)
             {
-                if (fuelBar.value <= 0) gameManager.TriggerLose();
+                if (fuelBar.value <= 0) GameManager.instance.TriggerLose();
 
                 fuelBar.value -= fuelSpeed * Time.deltaTime;
                 currentTime = Time.time + 1;
@@ -40,5 +56,15 @@ public class FuelBar : MonoBehaviour
     private void BoolChanger()
     {
         isWin = true;
+    }
+
+    private void TrySubscribe()
+    {
+        if(!isSubscribed && GameManager.instance!= null)
+        {
+            GameManager.instance.onLevelWin.AddListener(BoolChanger);
+            GameManager.instance.OnMission.AddListener(BoolChanger);
+            isSubscribed = true;
+        }
     }
 }

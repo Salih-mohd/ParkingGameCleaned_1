@@ -44,9 +44,15 @@ public class DancingController : MonoBehaviour
         ShowInfo.SetActive(false);
         parkingSpot.SetActive(false );
         //Debug.Log("instruction is offf");
-        yield return new WaitForSeconds(15);
-        gameOver=true;
-        gameManager.TriggerWin();
+        StartCoroutine(WinningGame());
+    }
+
+    IEnumerator WinningGame()
+    {
+        Debug.Log("inside winning game coroutine");
+        yield return new WaitForSeconds(10);
+        gameOver = true;
+        GameManager.instance.TriggerWin();
     }
 
     

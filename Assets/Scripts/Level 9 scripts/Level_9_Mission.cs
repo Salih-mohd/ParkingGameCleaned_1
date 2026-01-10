@@ -41,7 +41,11 @@ public class Level_9_Mission : MissionBase
     {
         foreach (GameObject obj in toEnable)
         {
-            obj.SetActive(true);
+            if(obj != null)
+            {
+                obj.SetActive(true);
+            }
+            
         }
     }
 

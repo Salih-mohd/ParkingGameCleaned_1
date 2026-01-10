@@ -37,22 +37,6 @@ public class UiManager : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-
-            pausePanel.SetActive(true);
-            winLoseCanvas.enabled = true;
-            inputActions.FindActionMap("Car").Disable();
-
-        }
-    }
-
-    private void OnEnable()
-    {
-        
-    }
 
     private void OnDisable()
     {
@@ -75,6 +59,14 @@ public class UiManager : MonoBehaviour
 
 
 
+    }
+
+
+    public void ShowPausePanel()
+    {
+        pausePanel.SetActive(true);
+        winLoseCanvas.enabled = true;
+        inputActions.FindActionMap("Car").Disable();
     }
 
     public void disablePausePanel()
