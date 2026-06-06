@@ -395,12 +395,4 @@ public abstract class BaseCar : MonoBehaviour
         }
     }
 
-
-
-
-
-
-
-
-
 }

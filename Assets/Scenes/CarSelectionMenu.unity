@@ -4795,6 +4795,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7586045925867340814, guid: 98cb3f321b9696048babf9543d41cb78, type: 3}
+      propertyPath: dancingOn.m_Name
+      value: Dancing On
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586045925867340814, guid: 98cb3f321b9696048babf9543d41cb78, type: 3}
+      propertyPath: danceActUp.m_Name
+      value: Dance Act Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586045925867340814, guid: 98cb3f321b9696048babf9543d41cb78, type: 3}
+      propertyPath: danceActDown.m_Name
+      value: Dance Act Down
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586045925867340814, guid: 98cb3f321b9696048babf9543d41cb78, type: 3}
+      propertyPath: danceActLeft.m_Name
+      value: Dance Act Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586045925867340814, guid: 98cb3f321b9696048babf9543d41cb78, type: 3}
+      propertyPath: danceActRight.m_Name
+      value: Dance Act Right
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4881,8 +4901,8 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_VertexColorAlwaysGammaSpace: 1
+  m_AdditionalShaderChannelsFlag: 1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0

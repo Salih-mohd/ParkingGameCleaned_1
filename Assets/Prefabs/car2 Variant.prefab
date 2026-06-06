@@ -756,8 +756,6 @@ MonoBehaviour:
       Input:
         InputAction: {fileID: -5630151704836100654, guid: 1d6e640e716dc4ff6989b73d02023f2b, type: 3}
         Gain: 1
-        LegacyInput: 
-        LegacyGain: 1
         CancelDeltaTime: 0
       InputValue: 0
       Driver:
@@ -769,8 +767,6 @@ MonoBehaviour:
       Input:
         InputAction: {fileID: -5630151704836100654, guid: 1d6e640e716dc4ff6989b73d02023f2b, type: 3}
         Gain: -1
-        LegacyInput: 
-        LegacyGain: 1
         CancelDeltaTime: 0
       InputValue: 0
       Driver:
@@ -782,8 +778,6 @@ MonoBehaviour:
       Input:
         InputAction: {fileID: 5082991133974614888, guid: 1d6e640e716dc4ff6989b73d02023f2b, type: 3}
         Gain: -1
-        LegacyInput: 
-        LegacyGain: 1
         CancelDeltaTime: 0
       InputValue: 0
       Driver:
@@ -1632,7 +1626,54 @@ MonoBehaviour:
   steeringRange: 30
   steeringRangeAtMaxSpeed: 10
   centreOfGravityOffset: -1
+  isBraking: 0
+  isForwardGear: 1
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  danceActUp:
+    m_Name: Dance Act Up
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 80d80c7c-8534-4732-a6ef-218fc33379e0
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  danceActDown:
+    m_Name: Dance Act Down
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9f198ee8-975f-4af0-a309-9cdfe69a49d5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  danceActLeft:
+    m_Name: Dance Act Left
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 0642c6cd-9277-4a71-9f76-25077d02de1f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  danceActRight:
+    m_Name: Dance Act Right
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7c4acd24-0b15-4ede-a294-29059ac09ff6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  dancingOn:
+    m_Name: Dancing On
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d45ed94c-6f4d-4154-b27c-fa4027dcba59
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   carCam01: {fileID: 413606480668635405}
   carCam02: {fileID: 7061758833188949574}
   rearCam: {fileID: 4892150687628215683}
@@ -1643,10 +1684,10 @@ MonoBehaviour:
   - {fileID: 71516569518477395}
   - {fileID: 8848814784909566076}
   isDancing: 0
-  minSpeedForSound: 0.3
-  maxSpeedForSound: 20
-  minPitch: 0.9
-  maxPitch: 1.5
+  brakeMaterial: {fileID: 0}
+  brakingColor: {r: 0, g: 0, b: 0, a: 0}
+  reverseColor: {r: 0, g: 0, b: 0, a: 0}
+  uiManager: {fileID: 0}
 --- !u!82 &5857770189061377285
 AudioSource:
   m_ObjectHideFlags: 0

@@ -49,7 +49,7 @@ public class DancingController : MonoBehaviour
 
     IEnumerator WinningGame()
     {
-        Debug.Log("inside winning game coroutine");
+       // Debug.Log("inside winning game coroutine");
         yield return new WaitForSeconds(10);
         gameOver = true;
         GameManager.instance.TriggerWin();

@@ -33,7 +33,6 @@ public class Npcss : MonoBehaviour
 
     IEnumerator SetDestination()
     {
-        
         yield return new WaitForSeconds(3);
         isWaiting=false;
         animator.SetBool("idle",false);

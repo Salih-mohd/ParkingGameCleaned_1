@@ -1,2 +1,0 @@
-D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
-D:\PROJECTS FROM 10 TO 19\Parking Mania\My project (1)\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

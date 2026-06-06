@@ -28,7 +28,7 @@ public class AIPath : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Path();
+        //Path();
         Gizmos.color = lineColor;
 
         for(int i=0;i<nodes.Count;i++)
